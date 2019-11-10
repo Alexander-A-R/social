@@ -1,0 +1,30 @@
+.sidebar{
+    display: inline-block;
+    width: 18%;
+    float: left;
+    height: 1000px;
+    background: royalblue;
+    margin-right: 2%;
+}
+.navMenu{
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+
+}
+.navMenu a{
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-family: 'Oswald', sans-serif;
+}
+.navMenu a:hover{
+    border-bottom: 1px solid white;
+}
+.navMenu:hover a:not(:hover){
+    opacity: 0.8;
+}
+.navMenu a:last-child{
+    margin-top: 30px;
+}
