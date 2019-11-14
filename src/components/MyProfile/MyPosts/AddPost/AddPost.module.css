@@ -1,0 +1,25 @@
+.addPost{
+    text-align: right;
+}
+.postText{
+    border: 1px solid darkgray;
+    width: 100%;
+    resize: none;
+    height: 23px;
+    transition: .3s;
+}
+.height{
+    height: 100px;
+}
+.postButton{
+    padding: 5px 10px;
+    background: white;
+    color: cornflowerblue;
+    border: 1px solid cornflowerblue;
+    border-radius: 3px;
+}
+.postButton:hover{
+    background: cornflowerblue;
+    color: white;
+    border: 1px solid cornflowerblue;
+}

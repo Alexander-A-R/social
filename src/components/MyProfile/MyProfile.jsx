@@ -1,14 +1,19 @@
 import React from 'react';
-import './style.css';
-import honda from "../../assets/honda.jpg";
+import classes from './MyProfile.module.css';
+import honda from '../../assets/honda.jpg';
+import MyPosts from './MyPosts/MyPosts';
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const MyProfile = () => {
     return (
-        <header>
-            <div className={'head-image'}>
+        <div>
+            <header className={classes.headImage}>
                 <img src={honda} alt="honda"/>
-            </div>
-        </header>
+            </header>
+            <ProfileInfo />
+            <MyPosts />
+        </div>
+
     );
 };
 

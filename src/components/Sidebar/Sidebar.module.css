@@ -10,14 +10,16 @@
     display: flex;
     flex-direction: column;
     padding-top: 30px;
+    text-align: right;
 
 }
 .navMenu a{
-    margin-left: 20px;
+    margin-right: 20px;
     color: white;
     text-decoration: none;
     padding: 10px;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
 }
 .navMenu a:hover{
     border-bottom: 1px solid white;

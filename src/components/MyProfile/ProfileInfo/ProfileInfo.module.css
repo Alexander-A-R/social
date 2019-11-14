@@ -1,0 +1,32 @@
+.profileInfo{
+    display: flex;
+    width: 100%;
+    margin: 20px auto;
+}
+.avatar{
+    width: 25%;
+    min-width: 150px;
+    margin-right: 20px;
+    padding: 10px;
+    background-color: beige;
+}
+.avatar img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.avatar button{
+    padding: 5px 10px;
+    background: white;
+    color: cornflowerblue;
+    border: 1px solid cornflowerblue;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+.avatar button:hover{
+    background: cornflowerblue;
+    color: white;
+    border: 1px solid cornflowerblue;
+}
+.info{
+
+}

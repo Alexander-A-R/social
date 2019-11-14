@@ -33,17 +33,3 @@
 .navbar:hover a:not(:hover){
     opacity: 0.8;
 }
-.menu-item{
-    display: inline-block;
-    position: relative;
-}
-.tooltip{
-    position: absolute;
-    top: 35px;
-    width: 100px;
-    background: cornflowerblue;
-    border-top: 1px solid white;
-}
-.tooltip a{
-    display: block;
-}
