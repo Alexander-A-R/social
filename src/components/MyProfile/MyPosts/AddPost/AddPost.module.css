@@ -1,4 +1,6 @@
 .addPost{
+    width: 80%;
+    margin: 0 auto;
     text-align: right;
 }
 .postText{
@@ -7,11 +9,14 @@
     resize: none;
     height: 23px;
     transition: .3s;
+    box-sizing: border-box;
 }
 .height{
     height: 100px;
 }
 .postButton{
+    margin-top: 5px;
+    margin-left: 10px;
     padding: 5px 10px;
     background: white;
     color: cornflowerblue;
@@ -21,5 +26,4 @@
 .postButton:hover{
     background: cornflowerblue;
     color: white;
-    border: 1px solid cornflowerblue;
 }
