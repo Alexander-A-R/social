@@ -1,9 +1,29 @@
 .post{
-    margin: 30px auto;
+    margin: 30px auto 50px auto;
+    padding: 10px;
+    background: beige;
+    border-radius: 5px;
 }
 .post img{
     width: 100%;
 }
+.post div{
+    text-align: right;
+    padding: 10px 0 5px 0;
+}
+.likes{
+    font-size: 16px;
+    color: cornflowerblue;
+    cursor: pointer;
+}
+.likes:before{
+    content: '\2764';
+    font-size: 17px;
+}
+.likes:hover{
+    color: royalblue;
+}
 .text{
-    margin-top: 20px;
+    margin: 10px 0 20px 0;
+    font-size: 14px;
 }

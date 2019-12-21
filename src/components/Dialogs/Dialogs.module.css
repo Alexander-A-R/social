@@ -3,22 +3,13 @@
     grid-template-columns: 9fr 3fr;
 }
 .users{
-    display: block;
     padding: 10px;
     border-left: 1px solid grey;
     box-sizing: border-box;
 }
 
 .messages{
-    display: inline-block;
+    overflow-y: auto;
     padding: 20px;
     box-sizing: border-box;
-}
-.messages>span{
-    display: block;
-    width: 80px;
-    margin: 0 auto;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    color: gray;
 }

@@ -1,10 +1,8 @@
 .sidebar{
-    display: inline-block;
-    width: 18%;
-    float: left;
-    height: 1000px;
+    display: block;
+    grid-area: sidebar;
     background: royalblue;
-    margin-right: 2%;
+    border-radius: 10px;
 }
 .navMenu{
     display: flex;
@@ -18,11 +16,11 @@
     color: white;
     text-decoration: none;
     padding: 10px;
-    font-family: 'Montserrat', sans-serif;
     font-size: 13px;
+    border-bottom: 1px solid transparent;
 }
 .navMenu a:hover{
-    border-bottom: 1px solid white;
+    border-color: white;
 }
 .navMenu:hover a:not(:hover){
     opacity: 0.8;

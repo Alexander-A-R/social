@@ -1,18 +1,22 @@
-import React from 'react';
-import classes from './MyPosts.module.css';
-import Post from './Post/Post';
-import AddPost from "./AddPost/AddPost";
+import MyPosts from "./MyPosts";
+import {addPost, changePostImage} from "../../../redux/profile-reducer";
+import {connect} from "react-redux";
+import React from "react";
 
-const MyPosts = ({posts, textPost, dispatch}) => {
-    return (
-        <div className={classes.post}>
-            <AddPost dispatch={dispatch} text={textPost}/>
-            {posts.map((post, index) => <Post key={index}
-                                              text={post.text}
-                                              imageUrl={post.imageUrl}
-                                              countLikes={post.countLikes}/>)}
-        </div>
-    );
+
+const MyPostsContainer = (props) => {
+
+    const onSubmitAddPost = (formData) => {
+        props.addPost(formData.postText);
+    };
+
+    return <MyPosts changePostImage={props.changePostImage} onSubmitAddPost={onSubmitAddPost} posts={props.posts} />
 };
 
-export default MyPosts;
+const mapStateToProps = state => {
+    return {
+        posts: state.profilePage.posts
+    };
+};
+
+export default connect(mapStateToProps, {addPost, changePostImage})(MyPostsContainer);

@@ -1,17 +1,14 @@
 import React from 'react';
-import classes from './MyProfile.module.css';
-import honda from '../../assets/honda.jpg';
-import MyPosts from './MyPosts/MyPosts';
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
+import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
-const MyProfile = () => {
+
+const MyProfile = (props) => {
+
     return (
         <div>
-            <header className={classes.headImage}>
-                <img src={honda} alt="honda"/>
-            </header>
-            <ProfileInfo />
-            <MyPosts />
+            <ProfileInfo userProfile={props.userProfile} isFetching={props.isFetching} status={props.status} putStatus={props.putStatus} />
+            <MyPostsContainer />
         </div>
 
     );

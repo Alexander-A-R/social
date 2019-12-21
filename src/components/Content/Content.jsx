@@ -1,34 +1,44 @@
 import React from 'react';
 import classes from './Content.module.css';
-import MyProfile from '../MyProfile/MyProfile';
-import Dialogs from '../Dialogs/Dialogs';
-import {Route} from "react-router-dom";
-import SliderPage from "../SliderPage/SliderPage";
-import {DataDialogs} from '../../index';
+import {Redirect, Route, withRouter} from 'react-router-dom';
+import SliderPage from '../SliderPage/SliderPage';
+import DialogsContainer from "../Dialogs/DialogsContainer";
+import UsersContainer from "../Users/UsersContainer";
+import MyProfileContainer from "../MyProfile/MyProfileContainer";
+import Login from "../Login/Login";
+import {connect} from "react-redux";
+import GameXO from "../GameXO/GameXO";
+import {compose} from "redux";
 
 
-function consumerDialogs(data) {
-    return (
-        <Route path={'/dialogs'}
-               render={() => (
-                   <Dialogs interlocutors={data.interlocutors}
-                            messages={data.messages}
-                   />
-               )}
-        />
-    );
-}
+const Content = (props) => {
+    if (props.isAuth && props.location.pathname === '/') {
+        return <Redirect to={`/profile/${props.userId}`} />
+    }
+    else if (!props.isAuth && props.location.pathname === '/') {
+        return <Redirect to={'/login'} />
+    }
 
-const Content = () => {
     return (
         <section className={classes.content}>
-            <Route path={'/profile'} component={MyProfile} />
-            <DataDialogs.Consumer>
-                {consumerDialogs}
-            </DataDialogs.Consumer>
+            <Route path={'/profile/:userId?'} render={() => <MyProfileContainer />} />
+            <Route path={'/dialogs'} render={() => <DialogsContainer />} />
+            <Route path={'/users'} render={() => <UsersContainer />} />
             <Route path={'/slider'} component={SliderPage} />
+            <Route path={'/login'} component={Login} />
+            <Route path={'/game'} component={GameXO} />
         </section>
     );
 };
 
-export default Content;
+const mapStateToProps = (state) => {
+    return {
+        isAuth: state.auth.isAuth,
+        userId: state.auth.userId
+    };
+};
+
+export default compose(
+    connect(mapStateToProps),
+    withRouter
+)(Content);

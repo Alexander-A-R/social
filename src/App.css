@@ -1,9 +1,17 @@
 .wrapper{
-    width: 90%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 50px auto;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    grid-template-areas:
+            'header header'
+            'sidebar content';
+    width: 80%;
     margin: 0 auto;
 }
 
-@media screen and (max-width: 840px){
+@media screen and (max-width: 980px) {
         .wrapper{
             width: 100%;
         }

@@ -1,13 +1,15 @@
 .header{
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    grid-area: header;
     width: 100%;
-    margin: 0 auto 15px auto;
+    margin: 0 auto;
     background: cornflowerblue;
+    border-radius: 10px;
 }
 .logo{
     width: 100px;
-    flex-shrink: 0;
     margin-left: 10px;
 }
 .logo>img{
@@ -32,4 +34,37 @@
 }
 .navbar:hover a:not(:hover){
     opacity: 0.8;
+}
+.login {
+    margin: 0 10px 0 10px;
+    color: white;
+    position: relative;
+}
+.login>a {
+    color: white;
+    text-decoration: none;
+}
+.loginUser {
+    cursor: pointer;
+}
+.logoutMenu {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 100px;
+    height: 30px;
+    padding: 6px 0 0 0;
+    box-sizing: border-box;
+    animation: logoutMenu 0.3s;
+    text-align: center;
+    border-radius: 5px;
+    background-color: darkslategray;
+    overflow: hidden;
+}
+@keyframes logoutMenu {
+    from {height: 0;}
+    to {height: 30px}
+}
+.logoutMenu span {
+    cursor: pointer;
 }

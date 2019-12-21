@@ -1,4 +1,4 @@
 .content{
-    display: inline-block;
-    width: 80%;
+    display: block;
+    grid-area: content;
 }

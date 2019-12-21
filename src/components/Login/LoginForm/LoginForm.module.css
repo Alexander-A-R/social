@@ -1,0 +1,48 @@
+.preloader {
+    width: 20px;
+    position: absolute;
+    bottom: 34px;
+    left: 47%;
+    transform: translateX(-50%);
+}
+.formWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 30%;
+    padding: 50px 30px 30px 30px;
+    margin: 20px auto 0 auto;
+    background-color: #ddddff;
+    border: 2px solid cornflowerblue;
+    border-radius: 10px;
+}
+.field {
+    margin: 0 0 20px 0;
+}
+.field.checkbox {
+    color: black;
+    font-size: 11px;
+}
+.submitButton {
+    padding: 5px 10px;
+    background: white;
+    color: cornflowerblue;
+    border: 1px solid cornflowerblue;
+    border-radius: 3px;
+    float: right;
+}
+.submitButton:hover {
+    background: cornflowerblue;
+    color: white;
+}
+.formError {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 70%;
+    text-align: center;
+    border: 1px solid red;
+    color: red;
+    transform: translateX(-50%);
+}

@@ -6,7 +6,7 @@ const Slider = (props) => {
     console.log(props.children[0].className);
     return (
         <div>
-
+            <Slide />
         </div>
     );
 };

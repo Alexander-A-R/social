@@ -1,0 +1,26 @@
+.formControls {
+    position: relative;
+}
+.formControls.error input {
+    border: 2px solid red;
+    outline: none;
+}
+.formControls.error::after{
+    content: '!';
+    font-size: 11px;
+    display: block;
+    width: 13px;
+    position: absolute;
+    top: 3.5px;
+    left: 130px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+}
+.errorMessage {
+    display: block;
+    position: absolute;
+    color: red;
+    margin-left: 10px;
+}

@@ -1,21 +1,36 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
-import Header from './components/Header/Header';
+import HeaderContainer from './components/Header/HeaderContainer';
 import Sidebar from './components/Sidebar/Sidebar';
 import Content from './components/Content/Content';
-import {BrowserRouter} from "react-router-dom";
+import {connect} from "react-redux";
+import Preloader from "./components/common/Preloader/Preloader";
+import {getInitialApp, initializeApp} from "./redux/app-reducer";
 
 
-const App = () => {
-    return (
-        <BrowserRouter>
+class App extends Component {
+    componentDidMount() {
+        this.props.initializeApp();
+    }
+
+    render() {
+        if (!this.props.initialApp) {
+            return <Preloader />
+        }
+        return (
             <div className={'wrapper'}>
-                <Header/>
+                <HeaderContainer/>
                 <Sidebar/>
                 <Content/>
             </div>
-        </BrowserRouter>
-    );
+        );
+    }
+}
+
+const mapStateToProps = state => {
+    return {
+        initialApp: getInitialApp(state)
+    };
 };
 
-export default App;
+export default connect(mapStateToProps, {initializeApp})(App);

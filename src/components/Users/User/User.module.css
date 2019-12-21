@@ -1,0 +1,82 @@
+.user{
+    display: flex;
+    align-items: flex-start;
+    width: 70%;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+.first_block{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+.avatar{
+    display: block;
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+}
+.follow_button{
+    padding: 1px 3px;
+    background: white;
+    color: cornflowerblue;
+    border: 1px solid cornflowerblue;
+    border-radius: 3px;
+    outline: none;
+    font-size: 12px;
+}
+.follow_button:hover{
+    background: cornflowerblue;
+    color: white;
+}
+.disabled {
+    background-color: white;
+    color: gray;
+    border-color: gray;
+}
+.disabled:hover {
+    background-color: white;
+    color: gray;
+    border-color: gray;
+}
+
+.second_block{
+    width: 77%;
+    background-color: beige;
+    border-radius: 10px;
+    margin-left: 3%;
+    padding: 5px 10px;
+}
+.name_status{
+    display: inline-block;
+    width: 70%;
+    margin: auto 0;
+    vertical-align: top;
+}
+.name{
+    display: block;
+    margin-top: 3px;
+    font-size: 13px;
+    font-weight: bold;
+    overflow: hidden;
+}
+.status{
+    display: block;
+    margin-top: 7px;
+    overflow: hidden;
+}
+.location{
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+}
+.country{
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+.city{
+    margin-top: 0;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,27 @@
+.message{
+    padding: 20px;
+}
+.message__text{
+    width: 100%;
+    line-height: 1.5rem;
+    resize: none;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 3px;
+    overflow: auto;
+}
+.message__buttons{
+    padding: 5px 0 5px 0;
+    text-align: right;
+}
+.button_send{
+    padding: 5px 10px;
+    background: white;
+    color: cornflowerblue;
+    border: 1px solid cornflowerblue;
+    border-radius: 3px;
+}
+.button_send:hover{
+    background: cornflowerblue;
+    color: white;
+}

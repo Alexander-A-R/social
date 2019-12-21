@@ -1,27 +1,15 @@
-import React, {useState, useEffect} from 'react';
-import classes from './Dialogs.module.css';
-import Interlocutor from "./Interlocutor/Interlocutor";
-import Message from "./Message/Message";
-import {sendMessageActionCreator, updateNewMessageTextActionCreator} from "../../redux/state";
-import MessageSender from "./MessageSender/MessageSender";
 import Dialogs from './Dialogs';
-import StoreContext from "../../redux/storeContext";
+import {connect} from "react-redux";
+import {sendMessage} from "../../redux/dialogs-reducer";
+import withAuthRedirect from "../../hoc/withAuthRedirect/withAuthRedirect";
+import {compose} from "redux";
 
-const DialogsContainer = () => {
 
-    return(
-        <StoreContext>
-            {
-                store => {
-                    useEffect(() => {
-                        document.title = 'Сообщения';
-                    });
-
-                    return <Dialogs />
-                }
-            }
-        </StoreContext>
-    );
+const mapStateToProps = state => {
+    return {
+        messages: state.dialogsPage.messages,
+        interlocutors: state.dialogsPage.interlocutors,
+    };
 };
 
-export default DialogsContainer;
+export default compose(withAuthRedirect, connect(mapStateToProps, {sendMessage}))(Dialogs);
